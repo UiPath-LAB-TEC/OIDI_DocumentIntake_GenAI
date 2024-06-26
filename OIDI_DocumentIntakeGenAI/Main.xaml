@@ -1,0 +1,249 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ProcessDocuments" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uia="clr-namespace:UiPathTeam.Interactive.Activities;assembly=UiPathTeam.Interactive.Activities" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisad1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisascb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeB8De7Fce9F3146Ca8B032193B3A826Ed.Bundle;assembly=CustomGptDocumentTyp.7PJzP2KIVkL1o7qq033frgP4" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_Message" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>831,2414</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ProcessDocuments_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeCcad5376967349E6Bc3DBf302C53027A.Bundle</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Classification</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeB8De7Fce9F3146Ca8B032193B3A826Ed.Bundle</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPathTeam.Interactive.Activities.Properties</x:String>
+      <x:String>UiPathTeam.Interactive.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.WorkflowEvents.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.L7uuf30eXGD1VHieb36RqwK4</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.7PJzP2KIVkL1o7qq033frgP4</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPathTeam.Interactive.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ProcessDocuments" sap:VirtualizedContainerService.HintSize="655,2349" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="CoveredProceduresSection" />
+      <Variable x:TypeArguments="x:Boolean" Name="isValidCPTCode" />
+      <Variable x:TypeArguments="x:Int32" Name="DisplayMessageHandle" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uia:DisplayMessage BackColor="{x:Null}" FontSize="{x:Null}" ForeColor="{x:Null}" Hide="{x:Null}" DisplayName="Display Message" Handle="[DisplayMessageHandle]" sap:VirtualizedContainerService.HintSize="593,124" sap2010:WorkflowViewState.IdRef="DisplayMessage_1" Message="Extracting Covered CPT Codes." NewStyle="False" Position="BottomRight" Preset="Info">
+      <uia:DisplayMessage.Opacity>
+        <InArgument x:TypeArguments="s:Nullable(x:Double)">
+          <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8" />
+        </InArgument>
+      </uia:DisplayMessage.Opacity>
+    </uia:DisplayMessage>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="invokedWorkflows\GetCoveredProceduresSection.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="593,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="invokedWorkflows\GetCoveredProceduresSection.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_CoveredProceduresSection">[CoveredProceduresSection]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:ForEachFileX DisplayName="For Each File in Folder" Filter="*.pdf" Folder="Data\Input" sap:VirtualizedContainerService.HintSize="593,1921" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="True">
+      <ui:ForEachFileX.Body>
+        <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="559,1671" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="upr:ILocalResource" Name="IRCurrentFIle" />
+              <Variable x:TypeArguments="uisad:IDocumentData(uisascb:CustomGptDocumentTypeB8De7Fce9F3146Ca8B032193B3A826Ed)" Name="ExtractedDocData" />
+              <Variable x:TypeArguments="uisad1:DocumentData" Name="ClassificationResult" />
+              <Variable x:TypeArguments="x:Boolean" Name="isCustomer" />
+              <Variable x:TypeArguments="x:String" Name="Message" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:PathExists Exists="{x:Null}" DisplayName="Path Exists" sap:VirtualizedContainerService.HintSize="497,90" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[CurrentFile.FullName]" PathType="File" Resource="[IRCurrentFIle]" />
+            <uia:DisplayMessage BackColor="{x:Null}" FontSize="{x:Null}" ForeColor="{x:Null}" Hide="{x:Null}" DisplayName="Display Message" Handle="[DisplayMessageHandle]" sap:VirtualizedContainerService.HintSize="497,122" sap2010:WorkflowViewState.IdRef="DisplayMessage_2" Message="[&quot;Classifying Document :&quot;+CurrentFile.Name]" NewStyle="False" Position="BottomRight" Preset="Info">
+              <uia:DisplayMessage.Opacity>
+                <InArgument x:TypeArguments="s:Nullable(x:Double)">
+                  <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8" />
+                </InArgument>
+              </uia:DisplayMessage.Opacity>
+            </uia:DisplayMessage>
+            <p:ClassifyDocument ApiKey="{x:Null}" ClassifierResult="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" DocumentTypes="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" ClassificationResults="[ClassificationResult]" ClassifierId="generative_classifier" DisplayName="Classify Document" Endpoint="https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/cc6eaf2e-9ce9-48c9-acd1-b47913b37d45/du_/api/framework/projects/00000000-0000-0000-0000-000000000000/classifiers/generative_classifier/classification/start?api-version=1.0" FileInput="[IRCurrentFIle]" sap:VirtualizedContainerService.HintSize="497,242" sap2010:WorkflowViewState.IdRef="ClassifyDocument_1" MinimumConfidence="50" ProjectId="00000000-0000-0000-0000-000000000000" TimeoutInSeconds="3600">
+              <p:ClassifyDocument.GptPromptWithVariables>
+                <InArgument x:TypeArguments="x:String" x:Key="PreAuthForm">Insurance Pre authorization form</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="ClaimsForm">Health Insurance Claim form</InArgument>
+              </p:ClassifyDocument.GptPromptWithVariables>
+            </p:ClassifyDocument>
+            <uia:DisplayMessage BackColor="{x:Null}" FontSize="{x:Null}" ForeColor="{x:Null}" Hide="{x:Null}" DisplayName="Display Message" Handle="[DisplayMessageHandle]" sap:VirtualizedContainerService.HintSize="497,122" sap2010:WorkflowViewState.IdRef="DisplayMessage_3" Message="[&quot;Classified as  :&quot;+ClassificationResult.DocumentType.Name+&quot;. Confidence: &quot;+ClassificationResult.DocumentType.Confidence.ToString]" NewStyle="False" Position="BottomRight" Preset="Info">
+              <uia:DisplayMessage.Opacity>
+                <InArgument x:TypeArguments="s:Nullable(x:Double)">
+                  <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8" />
+                </InArgument>
+              </uia:DisplayMessage.Opacity>
+            </uia:DisplayMessage>
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[ClassificationResult.DocumentType.Name]" sap:VirtualizedContainerService.HintSize="497,592" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <Sequence x:Key="ClaimsForm" sap:VirtualizedContainerService.HintSize="450,386" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uia:DisplayMessage BackColor="{x:Null}" FontSize="{x:Null}" ForeColor="{x:Null}" Hide="{x:Null}" DisplayName="Display Message" Handle="[DisplayMessageHandle]" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="DisplayMessage_4" Message="Processing Claims" NewStyle="False" Position="BottomRight" Preset="Info">
+                  <uia:DisplayMessage.Opacity>
+                    <InArgument x:TypeArguments="s:Nullable(x:Double)">
+                      <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8" />
+                    </InArgument>
+                  </uia:DisplayMessage.Opacity>
+                </uia:DisplayMessage>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="invokedWorkflows\ProcessClaimsForm.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="invokedWorkflows\ProcessClaimsForm.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="upr:ILocalResource" x:Key="in_IRCurrentFIle">
+                      <VisualBasicValue x:TypeArguments="upr:ILocalResource" ExpressionText="IRCurrentFIle" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_CoveredProceduresSection">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CoveredProceduresSection" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_DisplayMessageHandle">
+                      <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="DisplayMessageHandle" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="out_Message">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_Message" />
+                    </InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </Sequence>
+              <Sequence x:Key="PreAuthForm" sap:VirtualizedContainerService.HintSize="450,386" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uia:DisplayMessage BackColor="{x:Null}" FontSize="{x:Null}" ForeColor="{x:Null}" Hide="{x:Null}" DisplayName="Display Message" Handle="[DisplayMessageHandle]" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="DisplayMessage_5" Message="Processing Pre Authorization" NewStyle="False" Position="BottomRight" Preset="Info">
+                  <uia:DisplayMessage.Opacity>
+                    <InArgument x:TypeArguments="s:Nullable(x:Double)">
+                      <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8" />
+                    </InArgument>
+                  </uia:DisplayMessage.Opacity>
+                </uia:DisplayMessage>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="invokedWorkflows\ProcessPreAuthorization.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="invokedWorkflows\ProcessPreAuthorization.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="upr:ILocalResource" x:Key="in_IRCurrentFIle">
+                      <VisualBasicValue x:TypeArguments="upr:ILocalResource" ExpressionText="IRCurrentFIle" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_CoveredProceduresSection">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CoveredProceduresSection" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="in_DisplayMessageHandle">
+                      <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="DisplayMessageHandle" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="out_Message">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_Message" />
+                    </InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </Sequence>
+            </Switch>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="497,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[out_Message]" />
+            <uia:CloseWindow DisplayName="Close By Handle" Handle="[DisplayMessageHandle]" sap:VirtualizedContainerService.HintSize="497,60" sap2010:WorkflowViewState.IdRef="CloseWindow_1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachFileX.Body>
+    </ui:ForEachFileX>
+  </Sequence>
+</Activity>

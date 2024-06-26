@@ -1,0 +1,77 @@
+{
+  "name": "OIDI_DocumentIntakeGenAI",
+  "projectId": "de9f07d5-6977-4339-a216-1390c0341984",
+  "description": "Build a process that supports real-time communication with Apps",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.DataService.Activities": "[23.10.0]",
+    "UiPath.DocumentUnderstanding.Activities": "[2.9.2]",
+    "UiPath.System.Activities": "[23.4.2]",
+    "UiPath.UIAutomation.Activities": "[24.10.0]",
+    "UiPath.WorkflowEvents.Activities": "[2.0.0]",
+    "UiPathTeam.Interactive.Activities": "[1.5.6.9]"
+  },
+  "webServices": [],
+  "entitiesStores": [
+    {
+      "serviceDocument": ".entities/EntitiesStore.json",
+      "tenantName": "DemoRepository",
+      "namespace": "OIDI_DocumentIntakeGenAI",
+      "uniqueReference": "ljVydFmZ3MTrHkveE2xQEx7xtMFzQSNYLGqYPds816w="
+    }
+  ],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.10.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": false,
+    "isAttended": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "invokedWorkflows\\example1.xaml",
+      "uniqueId": "eb3e2c78-9fb6-41ee-a060-ebfb40b62637",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "e67e1f5b-6549-4bdb-bf0c-f488a4e94554",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
